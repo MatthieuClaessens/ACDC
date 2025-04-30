@@ -1,0 +1,138 @@
+/* 1. Fonts */
+@font-face {
+    font-family: 'TheDark';
+    src: url('../fonts/TheDark.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HARD_ROCK';
+    src: url('../fonts/HARD_ROCK.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ROCKnroll_typo_crazy';
+    src: url('../fonts/ROCKnroll_typo_crazy.ttf') format('truetype');
+    font-display: swap;
+}
+
+/* 2. Typographie */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, black 0%, black 25%, red 25%, red 50%, black 50%, black 75%, red 75%, red 100%);
+}
+
+h1, h2, h3 {
+    font-family: 'TheDark', sans-serif;
+    font-weight: 200;
+}
+
+/* 3. Éléments de Base */
+header h2, header i {
+    font-family: 'TheDark', sans-serif;
+    transition: transform 0.3s ease-in-out;
+}
+
+header h2:hover, header i:hover {
+    transform: scale(1.1);
+}
+
+/* 4. Navigation */
+nav a {
+    font-family: 'TheDark', sans-serif;
+    font-size: 20px;
+    color: #c30609;
+}
+
+.navbar-nav .nav-link:hover { /*Agrandissement des éléments présents*/
+    color: #9d9c8a;
+    transform: scale(1.1);
+}
+
+.custom-carousel {
+    position: relative;
+    overflow: visible;
+}
+
+/* Flèches du carousel */
+.carousel-control-prev, 
+.carousel-control-next {
+    width: auto;
+}
+
+/* 5. Membres */
+.membres img { /*Définition de la taille des images, bordures et animation*/
+    height: 200px;
+    width: 200px;
+    border: 2px solid white;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.membres img:hover, .membres p:hover {
+    transform: scale(1.2); /*Agrandissement des éléments présents*/
+}
+
+.membres p {
+    font-family: 'Open Sans', sans-serif; 
+}
+
+/* 6. Boutons et éclairs */
+section i, footer i, nav i {
+    color: #c30609;
+    font-weight: 100;
+}
+
+#section_discographie h5 {
+    font-size: 19px;
+}
+
+.btn-lireplus, .btn-envoyer, .btn-annuler { /* Boutons section_discographie et contact*/
+    font-family: 'ROCKnroll_typo_crazy', sans-serif;
+}
+
+/* 7. Tableau de concerts */
+.concerts th {
+    background-color: #212329;
+}
+
+.concerts td {
+    background-color: #212329; /*Définition des couleurs, police et bordure du tableau*/
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 1px solid #453838;
+}
+
+.custom-active-row td, .custom-active-cell {
+    background-color: #373b3e !important;
+}
+
+/* 8. Forms customisées */
+.custom-form::placeholder { /*Polices et couleurs*/
+    color: #c30609 !important;
+    font-family: 'HARD_ROCK', sans-serif !important;
+}
+
+/* 9. Musique */
+.music-button:hover { /*Agrandissement du bouton musique*/
+    transform: scale(1.1);
+    transition: transform 0.3s ease; 
+}
+
+.music-button-img {
+    transition: transform 0.6s linear;
+}
+
+.music-button-img.playing {
+    will-change: transform;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate { /*Rotation de l'image présente dans le bouton lors de la lecture de la musique*/
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
